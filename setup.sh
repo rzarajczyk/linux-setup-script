@@ -17,7 +17,7 @@ info "Welcome to linux-setup-script"
 
 TIMEZONES=$(timedatectl list-timezones)
 TMP_FILE=$(mktemp)
-CURRENT_TZ=$(timedatectl show -p Timezone --value 2>/dev/null || echo "Europe/Warsaw")
+CURRENT_TZ="Europe/Warsaw"
 
 while IFS= read -r tz; do
     echo "\"$tz\" \"\" " >> "$TMP_FILE"
