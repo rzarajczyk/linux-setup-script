@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "hello"
 set -e
 
 function info {
@@ -14,16 +13,15 @@ function warn {
     echo -e "${COLOR}$1${NC}"
 }
 
-info "aaa"
-warn "bbb"
+info "Welcome to linux-setup-script"
 
-#TIMEZONES=$(timedatectl list-timezones)
-#TMP_FILE=$(mktemp)
+TIMEZONES=$(timedatectl list-timezones)
+TMP_FILE=$(mktemp)
 #CURRENT_TZ=$(timedatectl show -p Timezone --value 2>/dev/null || echo "Europe/Warsaw")
 #
-#while IFS= read -r tz; do
-#    echo "\"$tz\" \"\" " >> "$TMP_FILE"
-#done <<< "$TIMEZONES"
+while IFS= read -r tz; do
+    echo "\"$tz\" \"\" " >> "$TMP_FILE"
+done <<< "$TIMEZONES"
 #
 ## Use whiptail to select timezone with search capability
 #TIMEZONE=$(whiptail --title "Timezone Selection" --menu "Choose your timezone (use arrow keys and initial typing to search):" 20 60 10 \
