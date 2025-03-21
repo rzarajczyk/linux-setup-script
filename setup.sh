@@ -14,6 +14,8 @@ function warn {
     echo -e "${COLOR}$1${NC}"
 }
 
+info "aaa"
+warn "bbb"
 
 #TIMEZONES=$(timedatectl list-timezones)
 #TMP_FILE=$(mktemp)
