@@ -15,6 +15,10 @@ function warn {
 
 info "Welcome to linux-setup-script"
 
+sudo apt-get update
+sudo apt-get -y upgrade
+sudo apt-get -y install avahi-daemon screen git jq samba qemu-guest-agent
+
 TIMEZONES=$(timedatectl list-timezones)
 TMP_FILE=$(mktemp)
 CURRENT_TZ="Europe/Warsaw"
@@ -37,6 +41,3 @@ rm -f "$TMP_FILE"
 #info "Setting timezone to $TIMEZONE"
 #sudo timedatectl set-timezone "$TIMEZONE"
 #
-#sudo apt-get update
-#sudo apt-get -y upgrade
-#sudo apt-get -y install avahi-daemon screen git jq samba qemu-guest-agent
