@@ -1,3 +1,3 @@
 ```shell
-curl -sL --compressed https://tinyurl.com/yc3ffnam | bash
+curl -sL https://tinyurl.com/yc3ffnam | bash
 ```
