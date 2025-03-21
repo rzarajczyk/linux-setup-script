@@ -24,11 +24,11 @@ while IFS= read -r tz; do
 done <<< "$TIMEZONES"
 #
 ## Use whiptail to select timezone with search capability
-#TIMEZONE=$(whiptail --title "Timezone Selection" --menu "Choose your timezone (use arrow keys and initial typing to search):" 20 60 10 \
-#    --default-item "$CURRENT_TZ" \
-#    --file "$TMP_FILE" 3>&1 1>&2 2>&3)
-#
-#rm -f "$TMP_FILE"
+TIMEZONE=$(whiptail --title "Timezone Selection" --menu "Choose your timezone (use arrow keys and initial typing to search):" 20 60 10 \
+    --default-item "$CURRENT_TZ" \
+    --file "$TMP_FILE" 3>&1 1>&2 2>&3)
+
+rm -f "$TMP_FILE"
 #
 #if [ -z "$TIMEZONE" ]; then
 #    echo "Timezone selection canceled. Using default: Europe/Warsaw"
