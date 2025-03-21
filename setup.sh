@@ -1,20 +1,20 @@
 #!/bin/bash
 echo "hello"
-#set -e
-#
-#function info {
-#    COLOR='\033[0;33m' # YELLOW
-#    NC='\033[0m' # No COLOR
-#    echo -e "${COLOR}$1${NC}"
-#}
-#
-#function warn {
-#    COLOR='\033[1;31m' # COLOR
-#    NC='\033[0m' # No COLOR
-#    echo -e "${COLOR}$1${NC}"
-#}
-#
-#
+set -e
+
+function info {
+    COLOR='\033[0;33m' # YELLOW
+    NC='\033[0m' # No COLOR
+    echo -e "${COLOR}$1${NC}"
+}
+
+function warn {
+    COLOR='\033[1;31m' # COLOR
+    NC='\033[0m' # No COLOR
+    echo -e "${COLOR}$1${NC}"
+}
+
+
 #TIMEZONES=$(timedatectl list-timezones)
 #TMP_FILE=$(mktemp)
 #CURRENT_TZ=$(timedatectl show -p Timezone --value 2>/dev/null || echo "Europe/Warsaw")
